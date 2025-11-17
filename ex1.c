@@ -16,7 +16,6 @@ int main()
     char character;
     scanf(" %c", &character);
     printf("Its numerical value is: %d\n",character);
-    printf("%d\n", character);
     printf("0 for even, 1 for odd: %d\n",character&1);
     
     /*. Scan one character from the user.
@@ -32,7 +31,7 @@ int main()
     printf("Please enter a negative integer \n");
     scanf("%d", &NegativeNumber);
     printf("1's complement: %d\n", -~(NegativeNumber));
-    printf("unsigned: %u\n", (unsigned)NegativeNumber);
+    printf("unsigned: %u\n", NegativeNumber);
     /*. Scan a negative integer. [2’s complement].
         Print its value in 1’s complement.
         Print its value as unsigned. */
@@ -68,8 +67,8 @@ int main()
     int octalnumber, hexadecimalnumber;
     printf("Please enter two numbers in octal and hexadecimal bases\n");
     scanf("%o %x", &octalnumber, &hexadecimalnumber);
-    printf("%d %d\n", octalnumber&1, hexadecimalnumber&1);
-    printf("%d %d\n", (octalnumber&(1<<31))>>31, (hexadecimalnumber&(1<<31))>>31);
+    printf("LSBs: %d %d\n", octalnumber&1, hexadecimalnumber&1);
+    printf("MSBs: %d %d\n", (octalnumber&(1<<31))>>31, (hexadecimalnumber&(1<<31))>>31);
 
 
     /*  Scan two numbers:
