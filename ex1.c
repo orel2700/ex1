@@ -12,10 +12,13 @@ int main()
 
     // Ascii
     printf("Ascii:\n");
+    printf("Please enter a character \n");
     char character;
     scanf(" %c", &character);
+    printf("Its numerical value is: %d\n",character);
     printf("%d\n", character);
-    printf("%d\n", character&1);
+    printf("0 for even, 1 for odd: %d\n",character&1);
+    
     /*. Scan one character from the user.
         Then, refer to it as an integer.
         a. Print its value.
@@ -26,6 +29,7 @@ int main()
     // 2's complement and other representations
     printf("\n2's complement to other representations:\n");
     int NegativeNumber;
+    printf("Please enter a negative integer \n");
     scanf("%d", &NegativeNumber);
     printf("1's complement: %d\n", -~(NegativeNumber));
     printf("unsigned: %u\n", (unsigned)NegativeNumber);
@@ -34,10 +38,11 @@ int main()
         Print its value as unsigned. */
 
     // Shifting right and left
-    printf("\nShifting right and left:\n");
+    printf("Shifting right and left:\n");
     int Value, ShiftRight, ShiftLeft;
+    printf("Please enter 3 integers \n");
     scanf("%d %d %d", &Value, &ShiftRight, &ShiftLeft);
-    printf("%d\n", ((Value>>ShiftRight)<<ShiftLeft));
+    printf("After shifting right and left: %d\n", ((Value>>ShiftRight)<<ShiftLeft));
     /*. Scan 3 integers.
         The first one - the value you will play with.
         The second and the third - how much to shift right and left, respectively.
@@ -46,6 +51,7 @@ int main()
     // Even - Odd
     printf("\nEven - Odd:\n");
     int num1, num2, num3;
+    printf("Please enter 3 integers \n");
     scanf("%d %d %d", &num1, &num2, &num3);
     int check1 = num1&1;
     int check2 = num2&1;
@@ -60,9 +66,10 @@ int main()
     // Different Bases
     printf("\nDifferent Bases:\n");
     int octalnumber, hexadecimalnumber;
+    printf("Please enter two numbers in octal and hexadecimal bases\n");
     scanf("%o %x", &octalnumber, &hexadecimalnumber);
-    printf("%d %d\n", octalnumber&1, (octalnumber&(1<<31))>>31);
-    printf("%d %d\n", hexadecimalnumber&1, (hexadecimalnumber&(1<<31))>>31);
+    printf("%d %d\n", octalnumber&1, hexadecimalnumber&1);
+    printf("%d %d\n", (octalnumber&(1<<31))>>31, (hexadecimalnumber&(1<<31))>>31);
 
 
     /*  Scan two numbers:
