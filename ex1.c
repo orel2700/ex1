@@ -79,7 +79,7 @@ int main()
     printf("Please enter two numbers in octal and hexadecimal bases\n");
     scanf("%o %x", &octalnumber, &hexadecimalnumber);
     printf("LSBs: %d %d\n", octalnumber&1, hexadecimalnumber&1);
-    printf("MSBs: %d %d\n", (octalnumber&(1<<31))>>31, (hexadecimalnumber&(1<<31))>>31);
+    printf("MSBs: %d %d\n", (octalnumber&(1<<31))>>31, (hexadecimalnumber&(1<<31))>>31);//our system based on 32bit so 1<<31 means 1 and  thirty one -0, so when we do x&1<<31 we check the MSB and for print his we take the result of x&1<<31 (0 or 1) and go her 31 right shifts and print the value (0 or 1) =MSB.
     
 
 
