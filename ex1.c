@@ -60,9 +60,9 @@ int main()
     // Different Bases
     printf("\nDifferent Bases:\n");
     int octalnumber, hexadecimalnumber;
-    scanf("%o %x",&octalnumber, &hexadecimalnumber);
-    printf("%d%d\n", octalnumber&1,(octalnumber&(1<<31))>>31);
-    printf("%d\n", hexadecimalnumber&1,(hexadecimalnumber&(1<<31))>>31);
+    scanf("%o %x", &octalnumber, &hexadecimalnumber);
+    printf("%d %d\n", octalnumber&1, (octalnumber&(1<<31))>>31);
+    printf("%d %d\n", hexadecimalnumber&1, (hexadecimalnumber&(1<<31))>>31);
 
 
     /*  Scan two numbers:
