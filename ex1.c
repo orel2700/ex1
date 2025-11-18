@@ -31,11 +31,11 @@ int main()
         Print its value in 1’s complement.
         Print its value as unsigned. */
     printf("\n2's complement to other representations:\n");
-    int NegativeNumber;
+    int negativeNumber;
     printf("Please enter a negative integer \n");
-    scanf("%d", &NegativeNumber);
-    printf("1's complement: %d\n", -~(NegativeNumber));
-    printf("unsigned: %u\n", NegativeNumber);
+    scanf("%d", &negativeNumber);
+    printf("1's complement: %d\n", -~(negativeNumber));
+    printf("unsigned: %u\n", negativeNumber);
    
 
 
@@ -45,10 +45,10 @@ int main()
         The second and the third - how much to shift right and left, respectively.
         Print the value after shifting right and then shifting left. */
     printf("Shifting right and left:\n");
-    int Value, ShiftRight, ShiftLeft;
+    int value, shiftRight, shiftLeft;
     printf("Please enter 3 integers \n");
-    scanf("%d %d %d", &Value, &ShiftRight, &ShiftLeft);
-    printf("After shifting right and left: %d\n", ((Value>>ShiftRight)<<ShiftLeft));
+    scanf("%d %d %d", &value, &shiftRight, &shiftLeft);
+    printf("After shifting right and left: %d\n", ((value>>shiftRight)<<shiftLeft));
 
 
 
@@ -63,9 +63,9 @@ int main()
     int check1 = num1&1;
     int check2 = num2&1;
     int check3 = num3&1;
-    int OddOrEven;
-    OddOrEven = (check1&check2)|(check2&check3)|(check1&check3);
-    printf("0 - most of them are even, 1 - most of them are odd: %d\n", OddOrEven);
+    int oddOrEven;
+    oddOrEven = (check1&check2)|(check2&check3)|(check1&check3);
+    printf("0 - most of them are even, 1 - most of them are odd: %d\n", oddOrEven);
    
 
 
@@ -75,11 +75,14 @@ int main()
         Print their LSB’s.
         Print their MSB’s. */
     printf("\nDifferent Bases:\n");
-    int octalnumber, hexadecimalnumber;
+    int octalNumber, hexadecimalNumber;
     printf("Please enter two numbers in octal and hexadecimal bases\n");
-    scanf("%o %x", &octalnumber, &hexadecimalnumber);
-    printf("LSBs: %d %d\n", octalnumber&1, hexadecimalnumber&1);
-    printf("MSBs: %d %d\n", (octalnumber&(1<<31))>>31, (hexadecimalnumber&(1<<31))>>31);//our system based on 32bit so 1<<31 means 1 and  thirty one -0, so when we do x&1<<31 we check the MSB and for print his we take the result of x&1<<31 (0 or 1) and go her 31 right shifts and print the value (0 or 1) =MSB.
+    scanf("%o %x", &octalNumber, &hexadecimalNumber);
+    printf("LSBs: %d %d\n", octalNumber&1, hexadecimalNumber&1);
+    printf("MSBs: %d %d\n", (octalNumber&(1<<31))>>31, (hexadecimalNumber&(1<<31))>>31);/*our system is based on 32bit so 1<<31 means 1 and after 1, thirty one 0.
+    so when we do x&1<<31 we check the MSB 
+    for his print we take the result of x&1<<31 (0 or 1) and we do 31 right shifts and print the value (0 or 1) =MSB.*/
+    
     
 
 
